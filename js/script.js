@@ -8,47 +8,40 @@ const numbTot = 'FizzBuzz';
 
 for (let i=1; i <= 100; i++){
     
+    let blocco = document.createElement('div'); //Creazione elemento
+
+    document.getElementById('container').appendChild(blocco);//Aggiungere il div al container
+
     //LOOP
     if(i  % 3 === 0 && i % 5 === 0){  // Verifica 3 e 5
         console.log(numbTot);
         
-        //Stampaggio div nel DOM
-        let blocco = document.createElement('div');
+        //Definizione div nel DOM
         blocco.className = 'red';
-        document.getElementById('container').appendChild(blocco);
-
         blocco.innerHTML = numbTot;
 
     } else if(i % 3 === 0){  // Verifica 3
         console.log('Fizz');
 
-        //Stampaggio div nel DOM
-        let blocco = document.createElement('div');
+        //Definizione div nel DOM
         blocco.className = 'green';
-        document.getElementById('container').appendChild(blocco);
-
         blocco.innerHTML = numb3;
 
 
     } else if(i % 5 === 0){  // Verifica 5
+
         console.log('Buzz');
 
-        //Stampaggio div nel DOM
-        let blocco = document.createElement('div');
+        //Definizione div nel DOM
         blocco.className = 'yellow';
-        document.getElementById('container').appendChild(blocco);
-
         blocco.innerHTML = numb5;
 
-
     } else {
+
         console.log(i);  // Stampa numero 
         
-        //Stampaggio div nel DOM
-        let blocco = document.createElement('div');
+        //Definizione div nel DOM
         blocco.className = 'blue';
-        document.getElementById('container').appendChild(blocco);
-
         blocco.innerHTML = i;
     }
 }
